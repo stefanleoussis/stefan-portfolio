@@ -89,6 +89,7 @@ function ProjectDialog(props) {
                     backgroundColor: "black",
                     width: "400px",
                     height: "80px",
+                    outline: "none",
                   }}
                 >
                   <img src={githubLogo} alt="" width="60px" height="60px" />

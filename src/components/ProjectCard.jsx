@@ -42,7 +42,7 @@ export default function ProjectCard(props) {
   return (
     <Box>
       <Card className={classes.root} onClick={() => handleClickOpen()}>
-        <CardActionArea>
+        <CardActionArea style={{ outline: "none" }}>
           <CardMedia
             component="img"
             alt="Project Image"
