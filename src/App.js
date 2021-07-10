@@ -1,9 +1,9 @@
 import "./App.css";
 import { Grid } from "@material-ui/core";
 import ProjectCard from "./components/ProjectCard";
-import img1 from "./images/img1.jpg";
-import img2 from "./images/img2.jpg";
-import img3 from "./images/img3.jpg";
+import img1 from "./assets/img1.jpg";
+import img2 from "./assets/img2.jpg";
+import img3 from "./assets/img3.jpg";
 import React from "react";
 
 function App() {

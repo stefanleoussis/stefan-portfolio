@@ -1,6 +1,6 @@
 import { Avatar, Grid, Typography } from "@material-ui/core";
 import React from "react";
-import img1 from "../images/img1.jpg";
+import img1 from "../assets/img1.jpg";
 function TechAvatar(props) {
   return (
     <Grid item container direction="column" style={{ width: "70px" }}>
