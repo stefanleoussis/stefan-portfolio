@@ -7,7 +7,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import ProjectDialog from "./ProjectDialog";
 import React from "react";
-import { Box, Grid } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {

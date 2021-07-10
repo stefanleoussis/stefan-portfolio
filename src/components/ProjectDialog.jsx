@@ -1,30 +1,18 @@
 import {
-  Avatar,
   Box,
   Dialog,
   DialogContent,
-  DialogTitle,
   Grid,
-  makeStyles,
   Typography,
   Button,
-  Link,
 } from "@material-ui/core";
-import { blue } from "@material-ui/core/colors";
 import React from "react";
 import PropTypes from "prop-types";
 import img1 from "../assets/img1.jpg";
 import githubLogo from "../assets/githubLogo.png";
 import TechAvatar from "./TechAvatar";
-const useStyles = makeStyles({
-  avatar: {
-    backgroundColor: blue[100],
-    color: blue[600],
-  },
-});
 
 function ProjectDialog(props) {
-  const classes = useStyles();
   const { onClose, open } = props;
 
   const handleClose = () => {
@@ -65,9 +53,11 @@ function ProjectDialog(props) {
                 </Grid>
                 <Box width="30px" />
                 {/* // Here we will add a map of tech img and tech name and map them as avatars */}
-                {props.data.techstack.map((item) => {
-                  return <TechAvatar title={item} />;
-                })}
+                {props.data.techstack
+                  ? props.data.techstack.map((item) => {
+                      return <TechAvatar title={item.title} logo={item.logo} />;
+                    })
+                  : null}
               </Grid>
               <Box height="80%" />
               <Grid
