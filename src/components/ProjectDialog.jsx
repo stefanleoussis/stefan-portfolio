@@ -8,6 +8,7 @@ import {
   makeStyles,
   Typography,
   Button,
+  Link,
 } from "@material-ui/core";
 import { blue } from "@material-ui/core/colors";
 import React from "react";
@@ -15,7 +16,6 @@ import PropTypes from "prop-types";
 import img1 from "../assets/img1.jpg";
 import githubLogo from "../assets/githubLogo.png";
 import TechAvatar from "./TechAvatar";
-
 const useStyles = makeStyles({
   avatar: {
     backgroundColor: blue[100],
@@ -47,14 +47,9 @@ function ProjectDialog(props) {
           <Box height="30px" />
           <Grid item container direction="row">
             <Grid item sm={6}>
-              <Typography variant="h2">Project Name</Typography>
+              <Typography variant="h2">{props.data.title}</Typography>
               <Box height="30px" />
-              <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                blanditiis tenetur unde suscipit, quam beatae rerum inventore
-                consectetur, neque doloribus, cupiditate numquam dignissimos
-                laborum fugiat deleniti? Eum quasi quidem quibusdam.
-              </Typography>
+              <Typography variant="body1">{props.data.desc}</Typography>
             </Grid>
             <Grid item container sm={6}>
               <Grid
@@ -70,11 +65,9 @@ function ProjectDialog(props) {
                 </Grid>
                 <Box width="30px" />
                 {/* // Here we will add a map of tech img and tech name and map them as avatars */}
-                <TechAvatar />
-                <TechAvatar />
-                <TechAvatar />
-                <TechAvatar />
-                <TechAvatar />
+                {props.data.techstack.map((item) => {
+                  return <TechAvatar title={item} />;
+                })}
               </Grid>
               <Box height="80%" />
               <Grid
@@ -91,6 +84,7 @@ function ProjectDialog(props) {
                     height: "80px",
                     outline: "none",
                   }}
+                  onClick={() => window.open(props.data.githubLink, "_blank")}
                 >
                   <img src={githubLogo} alt="" width="60px" height="60px" />
                 </Button>
@@ -106,6 +100,7 @@ function ProjectDialog(props) {
 ProjectDialog.propTypes = {
   onClose: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export default ProjectDialog;

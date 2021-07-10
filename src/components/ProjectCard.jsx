@@ -20,12 +20,12 @@ const useStyles = makeStyles({
 /*eslint-env es6*/
 const cardContent = {
   Messenger: `A Full-Stack MERN Project that allows users who speak completly different
-  languages to communicate with eachother`,
+  languages to communicate with eachother...`,
   Chatbot: `Built on the Flask framework, a conversational bot that is trained 
   through hundreds of Chatter-bot Trainer libraries. It gives well-calculated 
-  responses to general questions and common conver-sational topics.`,
-  "Web Api": `Built on the Flask framework, a Python Web API that retrieves 
-  information on the last 67 Hugo Book Winners. Implemented custom query filtering and while following REST API standards.`,
+  responses to general questions and common conver-sational topics...`,
+  "Web API": `Built on the Flask framework, a Python Web API that retrieves 
+  information on the last 67 Hugo Book Winners. Implemented custom query filtering and while following REST API standards...`,
 };
 
 export default function ProjectCard(props) {
@@ -52,17 +52,17 @@ export default function ProjectCard(props) {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {props.title}
+              {props.data.title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              {cardContent[props.title]
-                ? cardContent[props.title]
+              {cardContent[props.data.title]
+                ? cardContent[props.data.title]
                 : "You can Checkout this Project on my Github @ https://github.com/stefanleoussis"}
             </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
-      <ProjectDialog open={open} onClose={handleClose} />
+      <ProjectDialog open={open} onClose={handleClose} data={props.data} />
     </Box>
   );
 }
