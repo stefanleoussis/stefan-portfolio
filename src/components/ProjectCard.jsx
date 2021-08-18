@@ -50,7 +50,7 @@ export default function ProjectCard(props) {
             image={props.imgURL}
             title="Project Image"
           />
-          <CardContent>
+          <CardContent style={{ paddingBottom: "100%" }}>
             <Typography gutterBottom variant="h5" component="h2">
               {props.data.title}
             </Typography>
