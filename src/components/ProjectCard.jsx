@@ -34,8 +34,8 @@ export default function ProjectCard(props) {
   const handleClickOpen = () => {
     setOpen(true);
   };
-  const url =
-    '<div style="width:100%;height:0;padding-bottom:105%;position:relative;"><iframe src="https://giphy.com/embed/camWCqkBp46tbAi5WO" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/camWCqkBp46tbAi5WO">via GIPHY</a></p>';
+  // const url =
+  // '<div style="width:100%;height:0;padding-bottom:105%;position:relative;"><iframe src="https://giphy.com/embed/camWCqkBp46tbAi5WO" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/camWCqkBp46tbAi5WO">via GIPHY</a></p>';
   const handleClose = () => {
     console.log("yes");
     setOpen(false);

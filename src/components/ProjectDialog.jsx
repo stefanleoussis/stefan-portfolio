@@ -5,11 +5,9 @@ import {
   Grid,
   Typography,
   Button,
-  Container,
 } from "@material-ui/core";
 import React from "react";
 import PropTypes from "prop-types";
-import img1 from "../assets/img1.jpg";
 import githubLogo from "../assets/githubLogo.png";
 import TechAvatar from "./TechAvatar";
 
