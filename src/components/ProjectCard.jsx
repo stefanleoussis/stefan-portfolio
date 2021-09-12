@@ -6,8 +6,8 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import ProjectDialog from "./ProjectDialog";
-import React from "react";
 import { Box } from "@material-ui/core";
+import React from "react";
 
 const useStyles = makeStyles({
   root: {
@@ -34,7 +34,8 @@ export default function ProjectCard(props) {
   const handleClickOpen = () => {
     setOpen(true);
   };
-
+  const url =
+    '<div style="width:100%;height:0;padding-bottom:105%;position:relative;"><iframe src="https://giphy.com/embed/camWCqkBp46tbAi5WO" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/camWCqkBp46tbAi5WO">via GIPHY</a></p>';
   const handleClose = () => {
     console.log("yes");
     setOpen(false);
@@ -44,11 +45,9 @@ export default function ProjectCard(props) {
       <Card className={classes.root} onClick={() => handleClickOpen()}>
         <CardActionArea style={{ outline: "none" }}>
           <CardMedia
-            component="img"
-            alt="Project Image"
-            height="140"
-            image={props.imgURL}
-            title="Project Image"
+            image={props.data.image}
+            title="project image"
+            style={{ height: "100px" }}
           />
           <CardContent style={{ paddingBottom: "100%" }}>
             <Typography gutterBottom variant="h5" component="h2">
