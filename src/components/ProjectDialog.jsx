@@ -5,6 +5,7 @@ import {
   Grid,
   Typography,
   Button,
+  Container,
 } from "@material-ui/core";
 import React from "react";
 import PropTypes from "prop-types";
@@ -29,8 +30,23 @@ function ProjectDialog(props) {
     >
       <DialogContent>
         <Grid container direction="column" style={{ height: "80vh" }}>
-          <Grid item style={{ alignItems: "center" }}>
-            <img src={img1} alt="" height="250px" width="100%" />
+          <Grid
+            item
+            style={{
+              alignItems: "center",
+              backgroundColor: "#86b3fc",
+              height: "250px",
+              width: "100%",
+            }}
+          >
+            {/* <img src={props.data.image} alt="" height="250px" width="100%" /> */}
+            {/* <Container
+              style={{
+                backgroundColor: "black",
+                width: "100%",
+                height: "100%",
+              }}
+            ></Container> */}
           </Grid>
           <Box height="30px" />
           <Grid item container direction="row">
