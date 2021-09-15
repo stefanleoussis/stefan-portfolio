@@ -9,6 +9,7 @@ import typescriptLogo from "../assets/typescriptLogo.png";
 import webapi from "../assets/webapi.png";
 import messenger from "../assets/messenger.jpg";
 import chatbot from "../assets/chatbot.jpeg";
+import memories from "../assets/memories.png";
 export const projectCardData = [
   {
     title: "Messenger",
@@ -34,6 +35,18 @@ responses to general questions and common conver-sational topics.`,
     techstack: [
       { title: "Python", logo: pythonLogo },
       { title: "Flask", logo: flaskLogo },
+    ],
+  },
+  {
+    title: "Memories MERN App",
+    image: memories,
+    desc: `Built with the MERN stack, MERN memories allows you to document your memories`,
+    githubLink: `https://memories-app-stefan.netlify.app/`,
+    techstack: [
+      { title: "MongoDB", logo: mongoDBLogo },
+      { title: "Express.js", logo: expressLogo },
+      { title: "React.js", logo: reactLogo },
+      { title: "Node.js", logo: nodeLogo },
     ],
   },
   {
